@@ -53,15 +53,26 @@ export default function Game({ myChoice, score, setScore }) {
       <span className="text">You picked</span>
       <div className={`icon icon--${myChoice}`}></div>
      </div>
-    </div> 
+     {playerWin === "win" && <div className='game__play'>
+      <span className='text'>You Win!</span>
+      <Link to="/" className='play-again' onClick={() => setHouse()} >Play Again</Link>
+     </div>
+      }
+      {playerWin === "lose" && <div className='game__play'>
+      <span className='text'>You Win!</span>
+      <Link to="/" className='play-again' onClick={() => setHouse()} >Play Again</Link>
+     </div>
+      }
+      {playerWin === "draw" && <div className='game__play'>
+      <span className='text'>Draw!</span>
+      <Link to="/" className='play-again' onClick={() => setHouse()} >Play Again</Link>
+     </div>
+      }
+
+      <div className="game__house">
+        <span className="text">House picked</span>
+        <div className={`icon icon--${house}`}></div>
+      </div>
+     </div>
   );
 }
-
-/*  myChoice:{myChoice} <br />
-      houseChoice: {house} <br />
-      Result:
-      {playerWin === "win" && <Link to"/"> <h4>You win!</h4>}
-      {playerWin === "lost" && <h4>You lose!</h4>}
-      {playerWin === "draw" && <h4>Draw!</h4>}
-
-      <Link to="/" onClick={() => setHouse()}>Play Again!</Link> */

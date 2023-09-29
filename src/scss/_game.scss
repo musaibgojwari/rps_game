@@ -1,0 +1,82 @@
+
+
+.text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.game {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    &__you {
+        display: flex;
+        flex-direction: column;
+
+        .icon {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            border-color: transparent;
+            border: 25px solid;
+            background-size: 50%;
+
+            &--paper {
+                @include icon($imageP,$paper-gradient)
+            }
+
+            &--scissors {
+                @include icon($imageS,$scissors-gradient)
+            }
+
+            &--rock {
+                @include icon($imageR,$rock-gradient)
+            }
+        }
+
+    }
+
+    &__play {
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+    }
+
+    &__house {
+        display: flex;
+        flex-direction: column;
+
+    .text {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+    }
+
+        .icon {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            border-color: transparent;
+            border: 25px solid;
+            background-size: 50%;
+
+            &--paper {
+                @include icon($imageP,$paper-gradient)
+            }
+
+            &--scissors {
+                @include icon($imageS,$scissors-gradient)
+            }
+
+            &--rock {
+                @include icon($imageR,$rock-gradient)
+            }
+        }
+
+    }
+
+
+}
