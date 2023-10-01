@@ -4,6 +4,20 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 2.5rem;
+
+}
+
+.counter {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border-color: transparent;
+    border: 25px solid;
+    background-size: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
 }
 
 .game {
@@ -25,15 +39,24 @@
             background-size: 50%;
 
             &--paper {
-                @include icon($imageP,$paper-gradient)
+                @include icon($imageP,$paper-gradient);
+                &-winner{
+                    @include bigShadow($paper-gradient)
+                }
             }
 
-            &--scissors {
-                @include icon($imageS,$scissors-gradient)
+            &--scissor {
+                @include icon($imageS,$scissors-gradient);
+                &-winner{
+                    @include bigShadow($scissors-gradient)
+                }
             }
 
             &--rock {
-                @include icon($imageR,$rock-gradient)
+                @include icon($imageR,$rock-gradient);
+                &-winner{
+                    @include bigShadow($rock-gradient)
+                }
             }
         }
 
@@ -43,6 +66,21 @@
         display: flex;
         flex-direction: column;
         margin: 0 2rem;
+
+        .play-again {
+            padding: 12px 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            // text-transform: uppercase;
+            text-decoration: none;
+            border-color: transparent;
+            border: 1px solid;
+        }
+        &:hover {
+            transition: color .2s;
+            // background-color: rgb(110, 40, 40);
+            color: white;
+        }
     }
 
     &__house {
@@ -64,15 +102,24 @@
             background-size: 50%;
 
             &--paper {
-                @include icon($imageP,$paper-gradient)
+                @include icon($imageP,$paper-gradient);
+                &-winner{
+                    @include bigShadow($paper-gradient)
+                }
             }
 
-            &--scissors {
-                @include icon($imageS,$scissors-gradient)
+            &--scissor {
+                @include icon($imageS,$scissors-gradient);
+                &-winner{
+                    @include bigShadow($scissors-gradient)
+                }
             }
 
             &--rock {
-                @include icon($imageR,$rock-gradient)
+                @include icon($imageR,$rock-gradient);
+                &-winner{
+                    @include bigShadow($rock-gradient)
+                }
             }
         }
 

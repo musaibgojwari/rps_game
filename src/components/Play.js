@@ -12,7 +12,7 @@ export default function Play(
     }
   return (
     <div className='play'>
-        <img src={Triangle} alt="triangle" />
+        <img className='triangle' src={Triangle} alt="triangle" />
         <div className="items">
             <Link to="/game" >
             <div data-id="paper" onClick={setChoice} className="icon icon--paper">
@@ -20,7 +20,7 @@ export default function Play(
             </div>
             </Link>
             <Link to="/game" >
-            <div data-id="scissor" onClick={setChoice} className="icon icon--scissors">
+            <div data-id="scissor" onClick={setChoice} className="icon icon--scissor">
                 Scissors
             </div>
             </Link>
